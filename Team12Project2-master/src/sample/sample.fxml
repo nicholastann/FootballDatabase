@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox prefHeight="553.0" prefWidth="276.0" style="-fx-background-color: #073166;">
+         <children>
+            <Pane prefHeight="569.0" prefWidth="276.0">
+               <children>
+                  <Label layoutX="76.0" layoutY="73.0" text="Team 12" textFill="WHITE">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="147.0" text="Akshay Patel" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="89.0" layoutY="190.0" text="Phillip Pham" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="233.0" text="Nicholas Tann" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></VBox>
+      <TabPane layoutX="276.0" prefHeight="553.0" prefWidth="772.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Players (Single)">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="167.0" layoutY="80.0" text="Player First Name:" />
+                        <Label layoutX="167.0" layoutY="155.0" text="Player Last Name:" />
+                        <Label layoutX="455.0" layoutY="80.0" text="Field of Interest:" />
+                        <Label layoutX="455.0" layoutY="155.0" text="Year of Interest:" />
+                        <TextField fx:id="player_single_first_name" layoutX="167.0" layoutY="110.0" />
+                        <TextField fx:id="player_single_last_name" layoutX="167.0" layoutY="186.0" />
+                        <ComboBox fx:id="player_single_field_of_interest" layoutX="455.0" layoutY="110.0" prefWidth="150.0" />
+                        <ComboBox fx:id="player_single_year_of_interest" layoutX="455.0" layoutY="186.0" prefWidth="150.0" />
+                        <RadioButton fx:id="player_single_export" layoutX="217.0" layoutY="283.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="player_single_display_here" layoutX="431.0" layoutY="283.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="344.0" layoutY="325.0" text="Enter File Name:" />
+                        <TextField fx:id="player_single_file_name" layoutX="313.0" layoutY="364.0" />
+                        <Button fx:id="player_single_execute" layoutX="362.0" layoutY="420.0" mnemonicParsing="false" onAction="#playerSingleExecute" text="Execute" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Players (All)">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="167.0" layoutY="80.0" text="Field of Interest:" />
+                        <Label layoutX="167.0" layoutY="155.0" text="Find:" />
+                        <Label layoutX="455.0" layoutY="80.0" text="Year of Interest:" />
+                        <Label layoutX="455.0" layoutY="155.0" text="Specific Value:" />
+                        <ComboBox fx:id="player_all_year_of_interest" layoutX="455.0" layoutY="110.0" prefWidth="150.0" />
+                        <RadioButton fx:id="player_all_export" layoutX="217.0" layoutY="283.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="player_all_display_here" layoutX="431.0" layoutY="283.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="344.0" layoutY="326.0" text="Enter File Name:" />
+                        <TextField fx:id="player_all_file_name" layoutX="313.0" layoutY="364.0" />
+                        <Button fx:id="player_all_execute" layoutX="362.0" layoutY="420.0" mnemonicParsing="false" onAction="#playerAllExecute" text="Execute" />
+                        <ComboBox fx:id="player_all_find" layoutX="167.0" layoutY="186.0" prefWidth="150.0" />
+                        <TextField fx:id="player_all_specific_value" layoutX="452.0" layoutY="187.0" />
+                        <ComboBox fx:id="player_all_field_of_interest" layoutX="167.0" layoutY="110.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Teams (Single)">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="167.0" layoutY="80.0" text="Team Name:" />
+                        <Label layoutX="167.0" layoutY="155.0" text="Field of Interest:" />
+                        <Label layoutX="455.0" layoutY="80.0" text="Year of Interest:" />
+                        <ComboBox fx:id="team_single_year_of_interest" layoutX="455.0" layoutY="110.0" prefWidth="150.0" />
+                        <RadioButton fx:id="team_single_export" layoutX="217.0" layoutY="283.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="team_single_display_here" layoutX="431.0" layoutY="283.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="344.0" layoutY="326.0" text="Enter File Name:" />
+                        <TextField fx:id="team_single_file_name" layoutX="313.0" layoutY="364.0" />
+                        <ComboBox fx:id="team_single_field_of_interest" layoutX="167.0" layoutY="186.0" prefWidth="150.0" />
+                        <TextField fx:id="team_single_team_name" layoutX="167.0" layoutY="110.0" prefHeight="27.0" prefWidth="151.0" />
+                        <Button layoutX="362.0" layoutY="420.0" mnemonicParsing="false" onAction="#teamSingleExecute" text="Execute" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Teams (All)">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="167.0" layoutY="79.0" text="Field of Interest:" />
+                        <Label layoutX="455.0" layoutY="79.0" text="Year of Interest:" />
+                        <RadioButton fx:id="team_all_export" layoutX="220.0" layoutY="279.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="team_all_display_here" layoutX="431.0" layoutY="279.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="344.0" layoutY="325.0" text="Enter File Name:" />
+                        <TextField fx:id="team_all_file_name" layoutX="313.0" layoutY="363.0" />
+                        <Button fx:id="team_all_execute" layoutX="362.0" layoutY="420.0" mnemonicParsing="false" onAction="#teamAllExecute" text="Execute" />
+                        <ComboBox fx:id="team_all_field_of_interest" layoutX="167.0" layoutY="109.0" prefWidth="150.0" />
+                        <ComboBox fx:id="team_all_year_of_interest" layoutX="455.0" layoutY="109.0" prefWidth="150.0" />
+                        <Label layoutX="167.0" layoutY="162.0" text="Specific Value:" />
+                        <TextField fx:id="team_all_specific_value" layoutX="167.0" layoutY="190.0" prefHeight="27.0" prefWidth="145.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Games">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="155.0" layoutY="101.0" text="Stadium Name:" />
+                        <Label layoutX="443.0" layoutY="101.0" text="Date:" />
+                        <RadioButton fx:id="games_export" layoutX="205.0" layoutY="254.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="games_display_here" layoutX="416.0" layoutY="254.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="332.0" layoutY="307.0" text="Enter File Name:" />
+                        <TextField fx:id="games_file_name" layoutX="301.0" layoutY="344.0" />
+                        <Button layoutX="351.0" layoutY="398.0" mnemonicParsing="false" onAction="#gamesExecute" text="Execute" />
+                        <DatePicker fx:id="games_date" layoutX="443.0" layoutY="131.0" />
+                        <TextField fx:id="games_stadium_name" layoutX="155.0" layoutY="131.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Victory Chain">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="535.0" prefWidth="707.0">
+                     <children>
+                        <Label layoutX="190.0" layoutY="97.0" text="Team A:" />
+                        <RadioButton fx:id="victory_chain_export" layoutX="211.0" layoutY="258.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="victory_chain_display_here" layoutX="422.0" layoutY="258.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="338.0" layoutY="311.0" text="Enter File Name:" />
+                        <TextField fx:id="victory_chain_file_name" layoutX="307.0" layoutY="348.0" />
+                        <Button layoutX="357.0" layoutY="402.0" mnemonicParsing="false" onAction="#victoryChainExecute" text="Execute" />
+                        <TextField fx:id="victory_chain_team_a" layoutX="190.0" layoutY="129.0" />
+                        <TextField fx:id="victory_chain_team_b" layoutX="433.0" layoutY="129.0" />
+                        <Label layoutX="435.0" layoutY="97.0" text="Team B:" />
+                        <Label layoutX="48.0" layoutY="34.0" prefHeight="17.0" prefWidth="630.0" text="This will help find a victory chain where Team A beats Team B." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Rushing Yards">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="535.0" prefWidth="707.0">
+                     <children>
+                        <Label layoutX="172.0" layoutY="101.0" text="Team:" />
+                        <RadioButton fx:id="rushing_yards_export" layoutX="219.0" layoutY="254.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="rushing_yards_display_here" layoutX="430.0" layoutY="254.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="346.0" layoutY="307.0" text="Enter File Name:" />
+                        <TextField fx:id="rushing_yards_file_name" layoutX="315.0" layoutY="344.0" />
+                        <Button layoutX="365.0" layoutY="398.0" mnemonicParsing="false" onAction="#rushingYardsExecute" text="Execute" />
+                        <ComboBox fx:id="rushing_yards_year_of_interest" layoutX="451.0" layoutY="131.0" prefWidth="150.0" />
+                        <Label layoutX="452.0" layoutY="101.0" text="Year of Interest:" />
+                        <TextField fx:id="rushing_yards_team" layoutX="172.0" layoutY="131.0" />
+                        <Label layoutX="48.0" layoutY="33.0" prefHeight="17.0" prefWidth="597.0" text="This will find the team that has the most rushing yards against the given team." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Wins By Stadium">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="170.0" layoutY="101.0" text="Threshold (%):" />
+                        <Label layoutX="170.0" layoutY="172.0" text="Game Site:" />
+                        <RadioButton fx:id="wins_by_stadium_export" layoutX="220.0" layoutY="254.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="wins_by_stadium_display_here" layoutX="431.0" layoutY="254.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="347.0" layoutY="307.0" text="Enter File Name:" />
+                        <TextField fx:id="wins_by_stadium_file_name" layoutX="316.0" layoutY="344.0" />
+                        <Button layoutX="366.0" layoutY="398.0" mnemonicParsing="false" onAction="#winsByStadiumExecute" text="Execute" />
+                        <TextField fx:id="wins_by_stadium_threshold" layoutX="170.0" layoutY="131.0" />
+                        <ComboBox fx:id="wins_by_stadium_game_site" layoutX="171.0" layoutY="201.0" prefWidth="150.0" />
+                        <ComboBox fx:id="wins_by_stadium_year_of_interest" layoutX="452.0" layoutY="131.0" prefWidth="150.0" />
+                        <Label layoutX="453.0" layoutY="101.0" text="Year of Interest:" />
+                        <Label layoutX="49.0" layoutY="32.0" prefHeight="17.0" prefWidth="660.0" text="This will find number of games won at a stadium where the winning score was a certain % more than the losing score." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Hometown Info">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="535.0" prefWidth="707.0">
+                     <children>
+                        <Label layoutX="323.0" layoutY="99.0" text="Find Hometown For Most:" />
+                        <RadioButton fx:id="hometown_info_export" layoutX="216.0" layoutY="257.0" mnemonicParsing="false" text="Exports Results to File" />
+                        <RadioButton fx:id="hometown_info_display_here" layoutX="427.0" layoutY="257.0" mnemonicParsing="false" text="Display Results Here" />
+                        <Label layoutX="343.0" layoutY="310.0" text="Enter File Name:" />
+                        <TextField fx:id="hometown_info_file_name" layoutX="312.0" layoutY="347.0" />
+                        <Button layoutX="362.0" layoutY="401.0" mnemonicParsing="false" onAction="#hometownInfoExecute" text="Execute" />
+                        <ComboBox fx:id="hometown_info_area_of_interest" layoutX="316.0" layoutY="133.0" prefWidth="150.0" />
+                        <Label layoutX="46.0" layoutY="32.0" prefHeight="17.0" prefWidth="615.0" text="This will find the hometown that has the most of whatever is specified." />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
